@@ -22,7 +22,8 @@
 
     <main class="container">
         <h1 class="section-title">Entre em Contato</h1>
-        <p class="section-subtitle">Estamos prontos para atendê-lo. Envie sua mensagem ou venha nos visitar.</p>
+        <p class="section-subtitle">Estamos prontos para atendê-lo. Envie sua mensagem ou utilize um de nossos canais
+            diretos.</p>
 
         <div class="contact-grid">
             <div class="contact-form-container">
@@ -40,27 +41,62 @@
                         <label for="message">Mensagem</label>
                         <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="button">Enviar</button>
+                    <div class="submit-button-wrapper">
+                        <button type="submit" class="button">Enviar</button>
+                    </div>
                 </form>
             </div>
 
             <div class="contact-info">
                 <h3>Nossas Informações</h3>
-                <p><i class="fas fa-map-marker-alt"></i> <strong>Endereço:</strong><br>Avenida das Palmeiras, 580, Sala
-                    201, Centro, Timóteo - MG</p>
-                <p><i class="fas fa-phone"></i> <strong>Telefone:</strong><br>(31) 3848-1234</p>
-                <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp:</strong><br>(31) 99876-5432</p>
-                <p><i class="fas fa-envelope"></i> <strong>E-mail:</strong><br>contato@mendesodonto.com.br</p>
-
-                <div class="map-container">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14988.580993514652!2d-42.651717649999995!3d-19.54636915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb01986c7575193%3A0x673413861817c061!2sTim%C3%B3teo%2C%20MG!5e0!3m2!1spt-BR!2sbr!4v1672598831346!5m2!1spt-BR!2sbr"
-                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="contact-card-grid">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Avenida+das+Palmeiras+580+Timoteo+MG"
+                        target="_blank" class="contact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="card-text-content">
+                            <span class="card-title">Endereço</span>
+                            <span class="card-detail">Av. das Palmeiras, 580, Sala 201</span>
+                        </div>
+                    </a>
+                    <a href="tel:+553138481234" class="contact-card">
+                        <i class="fas fa-phone"></i>
+                        <div class="card-text-content">
+                            <span class="card-title">Telefone</span>
+                            <span class="card-detail">(31) 3848-1234</span>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/5531998765432" target="_blank" class="contact-card">
+                        <i class="fab fa-whatsapp"></i>
+                        <div class="card-text-content">
+                            <span class="card-title">WhatsApp</span>
+                            <span class="card-detail">(31) 99876-5432</span>
+                        </div>
+                    </a>
+                    <a href="mailto:contato@mendesodonto.com.br" class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <div class="card-text-content">
+                            <span class="card-title">E-mail</span>
+                            <span class="card-detail">contato@mendesodonto.com.br</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
     </main>
+
+    <section class="map-section">
+        <div class="map-section-header">
+            <h2 class="map-section-title">Nossa Localização</h2>
+            <p class="map-section-subtitle">Encontre-nos facilmente no coração de Timóteo. Estamos bem localizados para
+                melhor atendê-lo.</p>
+        </div>
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3755.777711467554!2d-42.64687588508886!3d-19.72145328672054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDQzJzE3LjIiUyA0MsKwMzgnMzkuMyJX!5e0!3m2!1spt-BR!2sbr!4v1625578345789!5m2!1spt-BR!2sbr"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
 
     <footer id="main-footer"></footer>
 
