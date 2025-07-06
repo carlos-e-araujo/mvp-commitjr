@@ -1,0 +1,144 @@
+/* css/main.css */
+
+/* 1. Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Lato:wght@400;700&display=swap');
+
+/* 2. CSS Variables */
+:root {
+    /* Colors */
+    --primary-color: #2B6CB0;
+    /* Azul Corporativo */
+    --secondary-color: #38B2AC;
+    /* Verde-água/Saúde */
+    --accent-color: #4FD1C5;
+    /* Destaque para CTAs */
+    --text-color-dark: #2D3748;
+    /* Cinza Escuro para textos */
+    --text-color-light: #F7FAFC;
+    /* Branco/Cinza Claro para textos em fundos escuros */
+    --background-color: #FFFFFF;
+    --light-gray-background: #EDF2F7;
+    --border-color: #CBD5E0;
+
+    /* Typography */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Lato', sans-serif;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 4rem;
+
+    /* Other */
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition-speed: 0.3s ease;
+}
+
+/* 3. Basic Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-color-dark);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    line-height: 1.2;
+    margin-bottom: var(--spacing-sm);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: var(--spacing-sm);
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 4. Utility Classes */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-lg) 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    background-color: var(--secondary-color);
+    color: var(--text-color-light);
+    font-family: var(--font-heading);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+.button:hover {
+    background-color: var(--accent-color);
+    color: var(--text-color-light);
+    transform: translateY(-2px);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+    font-size: 2.2rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto var(--spacing-lg) auto;
+    color: #718096;
+}

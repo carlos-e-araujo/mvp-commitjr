@@ -1,0 +1,134 @@
+/* css/header.css */
+
+/* Mobile First Styles */
+#main-header {
+    background-color: var(--background-color);
+    padding: var(--spacing-sm) 0;
+    box-shadow: var(--box-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.logo strong {
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+.main-nav {
+    display: none;
+    /* Hidden on mobile by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--background-color);
+    flex-direction: column;
+    padding: var(--spacing-md) 0;
+    box-shadow: var(--box-shadow);
+}
+
+.main-nav.active {
+    display: flex;
+    /* Shown when active */
+}
+
+.main-nav ul {
+    flex-direction: column;
+    width: 100%;
+}
+
+.main-nav li {
+    text-align: center;
+    margin: var(--spacing-sm) 0;
+}
+
+.main-nav a {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    padding: var(--spacing-xs) var(--spacing-sm);
+}
+
+.main-nav a:hover,
+.main-nav a.active-link {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.header-button {
+    display: none;
+    /* Hidden on mobile */
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    display: block;
+    /* Shown on mobile */
+}
+
+.menu-toggle .fa-times {
+    display: none;
+}
+
+.menu-toggle.active .fa-bars {
+    display: none;
+}
+
+.menu-toggle.active .fa-times {
+    display: block;
+}
+
+
+/* Tablet and larger screens */
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+        /* Hide hamburger menu */
+    }
+
+    .main-nav {
+        display: flex;
+        position: static;
+        width: auto;
+        background-color: transparent;
+        flex-direction: row;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .main-nav ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .main-nav li {
+        margin: 0 var(--spacing-sm);
+    }
+
+    .header-button {
+        display: inline-block;
+        /* Show button */
+    }
+}

@@ -1,0 +1,39 @@
+/* css/about-page.css */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+.about-image img {
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.about-text h2 {
+    margin-top: 0;
+}
+
+.about-text ul {
+    margin-top: var(--spacing-md);
+}
+
+.about-text ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.about-text ul i {
+    color: var(--secondary-color);
+    margin-right: var(--spacing-sm);
+    font-size: 1.2rem;
+}
+
+@media (min-width: 992px) {
+    .about-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}

@@ -1,0 +1,79 @@
+/* css/home.css */
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(43, 108, 176, 0.7), rgba(43, 108, 176, 0.7)), url('https://placehold.co/1920x1080/EDF2F7/2D3748?text=Sorriso+Saudavel') no-repeat center center/cover;
+    color: var(--text-color-light);
+    text-align: center;
+    padding: 6rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 var(--spacing-md);
+}
+
+.hero h1 {
+    color: var(--text-color-light);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: var(--spacing-lg);
+}
+
+.hero .button {
+    background-color: var(--accent-color);
+    font-size: 1.1rem;
+}
+
+.hero .button:hover {
+    background-color: var(--text-color-light);
+    color: var(--accent-color);
+}
+
+
+/* Features Section */
+.features-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    text-align: center;
+}
+
+.feature-item i {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.feature-item h3 {
+    font-size: 1.3rem;
+}
+
+
+/* CTA Section */
+.cta-section {
+    background-color: var(--light-gray-background);
+}
+
+.cta-content {
+    text-align: center;
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .features-section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
