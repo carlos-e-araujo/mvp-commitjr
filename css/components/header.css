@@ -1,13 +1,14 @@
 /* css/components/header.css */
-/* Header component following BEM methodology */
+/* Header component following BEM methodology with design system variables */
 
 .header {
     background-color: var(--background-color);
-    padding: var(--spacing-sm) 0;
-    box-shadow: var(--box-shadow);
+    padding: var(--header-padding);
+    box-shadow: var(--header-shadow);
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: var(--header-z-index);
+    border-bottom: var(--border-width-1) solid var(--border-color);
 }
 
 .header__container {
@@ -15,19 +16,26 @@
     justify-content: space-between;
     align-items: center;
     width: 90%;
+    max-width: var(--container-xl);
     margin: 0 auto;
 }
 
 /* Logo */
 .header__logo {
     font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
     color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition-colors);
+}
+
+.header__logo:hover {
+    color: var(--primary-600);
 }
 
 .header__logo-accent {
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     color: var(--secondary-color);
 }
 
@@ -41,7 +49,8 @@
     background-color: var(--background-color);
     flex-direction: column;
     padding: var(--spacing-md) 0;
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--shadow-lg);
+    border-top: var(--border-width-1) solid var(--border-color);
 }
 
 .header__nav--active {
@@ -51,25 +60,30 @@
 .header__nav-list {
     flex-direction: column;
     width: 100%;
+    gap: var(--spacing-2);
 }
 
 .header__nav-item {
     text-align: center;
-    margin: var(--spacing-sm) 0;
+    margin: var(--spacing-2) 0;
 }
 
 .header__nav-link {
     font-family: var(--font-heading);
-    font-weight: 500;
-    font-size: 1.1rem;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-lg);
     color: var(--primary-color);
-    padding: var(--spacing-xs) var(--spacing-sm);
+    padding: var(--spacing-2) var(--spacing-4);
+    text-decoration: none;
+    border-radius: var(--border-radius-md);
+    transition: var(--transition-colors);
+    display: inline-block;
 }
 
 .header__nav-link:hover,
 .header__nav-link--active {
     color: var(--secondary-color);
-    border-bottom: 2px solid var(--secondary-color);
+    background-color: var(--gray-50);
 }
 
 /* Header button */
@@ -81,10 +95,18 @@
 .header__menu-toggle {
     background: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: var(--font-size-2xl);
     color: var(--primary-color);
     cursor: pointer;
     display: block;
+    padding: var(--spacing-2);
+    border-radius: var(--border-radius-md);
+    transition: var(--transition-colors);
+}
+
+.header__menu-toggle:hover {
+    background-color: var(--gray-50);
+    color: var(--primary-600);
 }
 
 .header__menu-toggle .fa-times {
@@ -113,16 +135,28 @@
         flex-direction: row;
         box-shadow: none;
         padding: 0;
+        border-top: none;
     }
 
     .header__nav-list {
         display: flex;
         flex-direction: row;
         align-items: center;
+        gap: var(--spacing-1);
     }
 
     .header__nav-item {
-        margin: 0 var(--spacing-sm);
+        margin: 0;
+    }
+
+    .header__nav-link {
+        font-size: var(--font-size-base);
+        padding: var(--spacing-2) var(--spacing-4);
+    }
+
+    .header__nav-link:hover,
+    .header__nav-link--active {
+        background-color: var(--gray-50);
     }
 
     .header__button {

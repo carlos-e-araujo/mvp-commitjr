@@ -1,18 +1,20 @@
 /* css/components/button.css */
-/* Button component following BEM methodology */
+/* Button component following BEM methodology with design system variables */
 
 .button {
     display: inline-block;
-    padding: 0.8rem 1.6rem;
+    padding: var(--button-padding-base);
     background-color: var(--secondary-color);
     color: var(--text-color-light);
     font-family: var(--font-heading);
-    font-weight: 500;
-    border-radius: var(--border-radius);
+    font-weight: var(--button-font-weight);
+    font-size: var(--font-size-base);
+    border-radius: var(--button-border-radius);
     text-align: center;
     border: none;
     cursor: pointer;
-    transition: background-color var(--transition-speed), transform var(--transition-speed);
+    transition: var(--transition-colors), var(--transition-transform);
+    text-decoration: none;
 }
 
 .button:hover {
@@ -21,13 +23,41 @@
     transform: translateY(-2px);
 }
 
-/* Modifiers */
+.button:focus {
+    outline: none;
+    box-shadow: var(--input-focus-ring);
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
+/* Size Modifiers */
+.button--sm {
+    padding: var(--button-padding-sm);
+    font-size: var(--font-size-sm);
+}
+
+.button--lg {
+    padding: var(--button-padding-lg);
+    font-size: var(--font-size-lg);
+}
+
+/* Color Modifiers */
 .button--primary {
     background-color: var(--primary-color);
 }
 
 .button--primary:hover {
+    background-color: var(--primary-600);
+}
+
+.button--secondary {
     background-color: var(--secondary-color);
+}
+
+.button--secondary:hover {
+    background-color: var(--secondary-500);
 }
 
 .button--accent {
@@ -39,6 +69,30 @@
     color: var(--accent-color);
 }
 
+.button--success {
+    background-color: var(--success-color);
+}
+
+.button--success:hover {
+    background-color: var(--accent-600);
+}
+
+.button--outline {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: var(--border-width-2) solid var(--primary-color);
+}
+
+.button--outline:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+}
+
+/* Style Modifiers */
 .button--full-width {
     width: 100%;
+}
+
+.button--rounded {
+    border-radius: var(--border-radius-full);
 }

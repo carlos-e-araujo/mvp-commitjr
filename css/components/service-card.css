@@ -1,35 +1,76 @@
 /* css/components/service-card.css */
-/* Service card component following BEM methodology */
+/* Service card component following BEM methodology with design system variables */
 
 .service-card {
     background-color: var(--background-color);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--card-shadow);
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    transition: var(--transition-transform), var(--transition-shadow);
+    border: var(--border-width-1) solid var(--border-color);
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+    box-shadow: var(--card-shadow-hover);
+    border-color: var(--primary-200);
 }
 
 .service-card__image {
     width: 100%;
-    height: 200px;
+    height: 240px;
     object-fit: cover;
+    transition: var(--transition-transform);
+}
+
+.service-card:hover .service-card__image {
+    transform: scale(1.05);
 }
 
 .service-card__content {
-    padding: var(--spacing-md);
+    padding: var(--card-padding);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
 }
 
 .service-card__title {
-    margin-bottom: var(--spacing-sm);
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--primary-color);
+    margin: 0;
+    line-height: var(--line-height-tight);
 }
 
 .service-card__description {
-    margin-bottom: 0;
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-relaxed);
+    color: var(--gray-600);
+    margin: 0;
+    flex: 1;
+}
+
+/* Service card variants */
+.service-card--featured {
+    border-color: var(--accent-color);
+    background: linear-gradient(135deg, var(--background-color) 0%, var(--accent-50) 100%);
+}
+
+.service-card--featured .service-card__title {
+    color: var(--accent-600);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .service-card__image {
+        height: 200px;
+    }
+
+    .service-card__content {
+        padding: var(--spacing-5);
+    }
 }

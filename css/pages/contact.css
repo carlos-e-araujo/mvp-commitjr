@@ -1,37 +1,48 @@
 /* css/pages/contact.css */
-/* Contact page specific styles following BEM methodology */
+/* Contact page specific styles following BEM methodology with design system variables */
 
 /* Layout */
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-12);
     width: 100%;
-    max-width: 100%;
+    max-width: var(--container-xl);
+    margin: 0 auto;
+    padding: 0 var(--spacing-4);
 }
 
 .contact-grid__title {
     text-align: center;
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-8);
 }
 
-/* Container adjustments for small screens */
+/* Container adjustments */
 .contact-grid__form-container,
 .contact-grid__info-container {
     width: 100%;
     max-width: 100%;
     overflow: hidden;
+    background-color: var(--background-color);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    box-shadow: var(--card-shadow);
+    border: var(--border-width-1) solid var(--border-color);
 }
 
 .contact-cards {
     display: grid;
     grid-template-columns: 1fr;
-    gap: var(--spacing-md);
+    gap: var(--spacing-6);
 }
 
 /* Map Section */
 .map-section {
-    padding: var(--spacing-xl) 0;
-    background: linear-gradient(135deg, var(--light-gray-background) 0%, #f0f4f8 100%);
+    padding: var(--section-padding);
+    background: linear-gradient(135deg, var(--light-gray-background) 0%, var(--gray-200) 100%);
     position: relative;
     overflow-x: hidden;
 }
@@ -48,77 +59,109 @@
 
 .map-section__header {
     text-align: center;
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-12);
+    max-width: var(--container-md);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 var(--spacing-4);
 }
 
 .map-section__title {
     font-family: var(--font-heading);
-    font-size: 2rem;
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
     color: var(--primary-color);
-    margin-bottom: var(--spacing-sm);
-    font-weight: 700;
+    margin-bottom: var(--spacing-4);
+    line-height: var(--line-height-tight);
 }
 
 .map-section__subtitle {
-    color: var(--text-color-dark);
-    opacity: 0.7;
-    font-size: 1.1rem;
+    color: var(--gray-700);
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-relaxed);
     max-width: 500px;
     margin: 0 auto;
     font-family: var(--font-body);
 }
 
 .map-section__container {
-    max-width: 1200px;
+    max-width: var(--container-xl);
     margin: 0 auto;
-    border-radius: 12px;
+    border-radius: var(--border-radius-2xl);
     overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    border: var(--border-width-1) solid var(--border-color);
 }
 
 .map-section__iframe {
     width: 100%;
     height: 450px;
     border: 0;
-    filter: grayscale(20%);
-    transition: filter var(--transition-speed);
+    filter: grayscale(30%) contrast(1.1);
+    transition: filter var(--transition-slow);
 }
 
 .map-section__iframe:hover {
-    filter: grayscale(0%);
+    filter: grayscale(0%) contrast(1);
 }
 
 /* Responsive Design */
 @media (max-width: 399px) {
     .contact-grid {
-        gap: var(--spacing-md);
+        gap: var(--spacing-8);
+        padding: 0 var(--spacing-2);
+    }
+
+    .contact-grid__form-container,
+    .contact-grid__info-container {
+        padding: var(--spacing-5);
     }
 
     .contact-cards {
-        gap: var(--spacing-sm);
+        gap: var(--spacing-4);
+    }
+
+    .map-section__iframe {
+        height: 350px;
     }
 }
 
 @media (min-width: 400px) and (max-width: 767px) {
     .contact-cards {
         grid-template-columns: 1fr;
-        gap: var(--spacing-sm);
+        gap: var(--spacing-4);
+    }
+
+    .map-section__iframe {
+        height: 400px;
     }
 }
 
 @media (min-width: 768px) {
     .contact-grid {
         grid-template-columns: 1fr 1fr;
-        gap: var(--spacing-xl);
+        gap: var(--spacing-16);
     }
 
     .contact-cards {
         grid-template-columns: 1fr;
-        gap: var(--spacing-md);
+        gap: var(--spacing-6);
+    }
+
+    .map-section__title {
+        font-size: var(--font-size-5xl);
     }
 }
 
 @media (min-width: 992px) {
     .contact-cards {
         grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-6);
+    }
+}
+
+@media (min-width: 1200px) {
+    .contact-grid {
+        gap: var(--spacing-20);
     }
 }
