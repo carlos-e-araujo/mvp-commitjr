@@ -101,7 +101,7 @@
 
 
 /* Tablet and larger screens */
-@media (min-width: 768px) {
+@media (min-width: 1035px) {
     .menu-toggle {
         display: none;
         /* Hide hamburger menu */

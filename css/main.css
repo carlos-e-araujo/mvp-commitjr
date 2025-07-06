@@ -110,6 +110,27 @@ ul {
     max-width: 1200px;
     margin: 0 auto;
     padding: var(--spacing-lg) 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Container responsivo para telas pequenas */
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: var(--spacing-md) 0;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        word-break: break-word;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        padding: 0 var(--spacing-sm);
+        word-break: break-word;
+    }
 }
 
 .button {
