@@ -1,0 +1,50 @@
+/* css/components/contact-form.css */
+/* Contact form component following BEM methodology */
+
+.contact-form {
+    width: 100%;
+}
+
+.contact-form__group {
+    margin-bottom: var(--spacing-md);
+}
+
+.contact-form__label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--text-color-dark);
+}
+
+.contact-form__input,
+.contact-form__textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: var(--spacing-sm);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+    background-color: var(--background-color);
+    color: var(--text-color-dark);
+    box-sizing: border-box;
+}
+
+.contact-form__textarea {
+    resize: none;
+}
+
+.contact-form__input:focus,
+.contact-form__textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.1);
+}
+
+.contact-form__submit-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-md);
+}

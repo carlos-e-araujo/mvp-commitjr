@@ -1,0 +1,124 @@
+/* css/pages/contact.css */
+/* Contact page specific styles following BEM methodology */
+
+/* Layout */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    width: 100%;
+    max-width: 100%;
+}
+
+.contact-grid__title {
+    text-align: center;
+}
+
+/* Container adjustments for small screens */
+.contact-grid__form-container,
+.contact-grid__info-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.contact-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+}
+
+/* Map Section */
+.map-section {
+    padding: var(--spacing-xl) 0;
+    background: linear-gradient(135deg, var(--light-gray-background) 0%, #f0f4f8 100%);
+    position: relative;
+    overflow-x: hidden;
+}
+
+.map-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+}
+
+.map-section__header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.map-section__title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 700;
+}
+
+.map-section__subtitle {
+    color: var(--text-color-dark);
+    opacity: 0.7;
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin: 0 auto;
+    font-family: var(--font-body);
+}
+
+.map-section__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.map-section__iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    filter: grayscale(20%);
+    transition: filter var(--transition-speed);
+}
+
+.map-section__iframe:hover {
+    filter: grayscale(0%);
+}
+
+/* Responsive Design */
+@media (max-width: 399px) {
+    .contact-grid {
+        gap: var(--spacing-md);
+    }
+
+    .contact-cards {
+        gap: var(--spacing-sm);
+    }
+}
+
+@media (min-width: 400px) and (max-width: 767px) {
+    .contact-cards {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+}
+
+@media (min-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .contact-cards {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+}
+
+@media (min-width: 992px) {
+    .contact-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

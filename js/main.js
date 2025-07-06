@@ -9,13 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (headerContainer) {
         const observer = new MutationObserver((mutations, obs) => {
-            const menuButton = document.querySelector('.menu-toggle');
-            const nav = document.querySelector('.main-nav');
+            const menuButton = document.querySelector('.header__menu-toggle');
+            const nav = document.querySelector('.header__nav');
 
             if (menuButton && nav) {
                 menuButton.addEventListener('click', () => {
-                    nav.classList.toggle('active');
-                    menuButton.classList.toggle('active');
+                    nav.classList.toggle('header__nav--active');
+                    menuButton.classList.toggle('header__menu-toggle--active');
                 });
                 // Stop observing once the elements are found and listeners are attached
                 obs.disconnect();

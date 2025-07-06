@@ -1,0 +1,14 @@
+/* css/pages/services.css */
+/* Services page specific styles following BEM methodology */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

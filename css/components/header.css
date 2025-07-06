@@ -1,7 +1,7 @@
-/* css/header.css */
+/* css/components/header.css */
+/* Header component following BEM methodology */
 
-/* Mobile First Styles */
-#main-header {
+.header {
     background-color: var(--background-color);
     padding: var(--spacing-sm) 0;
     box-shadow: var(--box-shadow);
@@ -10,7 +10,7 @@
     z-index: 1000;
 }
 
-.header-container {
+.header__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,21 +18,22 @@
     margin: 0 auto;
 }
 
-.logo {
+/* Logo */
+.header__logo {
     font-family: var(--font-heading);
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary-color);
 }
 
-.logo strong {
+.header__logo-accent {
     font-weight: 500;
     color: var(--secondary-color);
 }
 
-.main-nav {
+/* Navigation */
+.header__nav {
     display: none;
-    /* Hidden on mobile by default */
     position: absolute;
     top: 100%;
     left: 0;
@@ -43,22 +44,21 @@
     box-shadow: var(--box-shadow);
 }
 
-.main-nav.active {
+.header__nav--active {
     display: flex;
-    /* Shown when active */
 }
 
-.main-nav ul {
+.header__nav-list {
     flex-direction: column;
     width: 100%;
 }
 
-.main-nav li {
+.header__nav-item {
     text-align: center;
     margin: var(--spacing-sm) 0;
 }
 
-.main-nav a {
+.header__nav-link {
     font-family: var(--font-heading);
     font-weight: 500;
     font-size: 1.1rem;
@@ -66,48 +66,46 @@
     padding: var(--spacing-xs) var(--spacing-sm);
 }
 
-.main-nav a:hover,
-.main-nav a.active-link {
+.header__nav-link:hover,
+.header__nav-link--active {
     color: var(--secondary-color);
     border-bottom: 2px solid var(--secondary-color);
 }
 
-.header-button {
+/* Header button */
+.header__button {
     display: none;
-    /* Hidden on mobile */
 }
 
-.menu-toggle {
+/* Menu toggle */
+.header__menu-toggle {
     background: none;
     border: none;
     font-size: 1.5rem;
     color: var(--primary-color);
     cursor: pointer;
     display: block;
-    /* Shown on mobile */
 }
 
-.menu-toggle .fa-times {
+.header__menu-toggle .fa-times {
     display: none;
 }
 
-.menu-toggle.active .fa-bars {
+.header__menu-toggle--active .fa-bars {
     display: none;
 }
 
-.menu-toggle.active .fa-times {
+.header__menu-toggle--active .fa-times {
     display: block;
 }
 
-
-/* Tablet and larger screens */
+/* Desktop styles */
 @media (min-width: 1035px) {
-    .menu-toggle {
+    .header__menu-toggle {
         display: none;
-        /* Hide hamburger menu */
     }
 
-    .main-nav {
+    .header__nav {
         display: flex;
         position: static;
         width: auto;
@@ -117,18 +115,17 @@
         padding: 0;
     }
 
-    .main-nav ul {
+    .header__nav-list {
         display: flex;
         flex-direction: row;
         align-items: center;
     }
 
-    .main-nav li {
+    .header__nav-item {
         margin: 0 var(--spacing-sm);
     }
 
-    .header-button {
+    .header__button {
         display: inline-block;
-        /* Show button */
     }
 }

@@ -1,86 +1,90 @@
-/* css/footer.css */
+/* css/components/footer.css */
+/* Footer component following BEM methodology */
 
-#main-footer {
+.footer {
     background-color: var(--text-color-dark);
     color: var(--text-color-light);
     padding-top: var(--spacing-xl);
 }
 
-.footer-grid {
+.footer__grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
     padding-bottom: var(--spacing-lg);
 }
 
-.footer-title {
+.footer__title {
     color: var(--text-color-light);
     font-size: 1.2rem;
     margin-bottom: var(--spacing-sm);
 }
 
-.footer-title strong {
+.footer__title-accent {
     color: var(--accent-color);
 }
 
-.footer-about p,
-.footer-links li,
-.footer-contact p {
+/* Footer sections */
+.footer__about-text,
+.footer__link,
+.footer__contact-text {
     color: var(--light-gray-background);
     opacity: 0.8;
 }
 
-.footer-links ul li {
+.footer__links-list .footer__links-item {
     margin-bottom: var(--spacing-xs);
 }
 
-.footer-links a {
+.footer__link {
     color: var(--light-gray-background);
     transition: color var(--transition-speed);
 }
 
-.footer-links a:hover {
+.footer__link:hover {
     color: var(--accent-color);
     padding-left: 5px;
 }
 
-.footer-contact i {
+.footer__contact-item {
+    margin-bottom: var(--spacing-xs);
+}
+
+.footer__contact-icon {
     color: var(--accent-color);
     margin-right: var(--spacing-xs);
     width: 20px;
     text-align: center;
 }
 
-.footer-social a {
+.footer__social-link {
     color: var(--text-color-light);
     font-size: 1.5rem;
     margin-right: var(--spacing-md);
     transition: color var(--transition-speed), transform var(--transition-speed);
 }
 
-.footer-social a:hover {
+.footer__social-link:hover {
     color: var(--accent-color);
     transform: translateY(-3px);
 }
 
-.footer-bottom {
+.footer__bottom {
     border-top: 1px solid #4A5568;
-    /* Cinza um pouco mais claro */
     text-align: center;
     padding: var(--spacing-md) 0;
     font-size: 0.9rem;
 }
 
-/* Tablet */
+/* Responsive */
 @media (min-width: 768px) {
-    .footer-grid {
+    .footer__grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Desktop */
 @media (min-width: 1024px) {
-    .footer-grid {
+    .footer__grid {
         grid-template-columns: 2fr 1fr 2fr 1fr;
     }
 }

@@ -10,55 +10,56 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/main-bem.css">
 </head>
 
 <body>
 
-    <header id="main-header"></header>
+    <header id="main-header" class="header"></header>
 
     <main>
         <section class="hero">
-            <div class="hero-content">
-                <h1>Seu Sorriso, Nossa Paixão.</h1>
-                <p>Tecnologia e cuidado humano para transformar a sua saúde bucal. Conheça a Mendes Odonto.</p>
-                <a href="contact.html" class="button">Agende sua Avaliação</a>
+            <div class="hero__content">
+                <h1 class="hero__title">Seu Sorriso, Nossa Paixão.</h1>
+                <p class="hero__description">Tecnologia e cuidado humano para transformar a sua saúde bucal. Conheça a
+                    Mendes Odonto.</p>
+                <a href="contact.html" class="button hero__button">Agende sua Avaliação</a>
             </div>
         </section>
 
-        <section class="features-section container">
-            <div class="feature-item">
-                <i class="fas fa-tooth"></i>
-                <h3>Odontologia Completa</h3>
-                <p>Todas as especialidades em um só lugar para sua conveniência e conforto.</p>
-            </div>
-            <div class="feature-item">
-                <i class="fas fa-microscope"></i>
-                <h3>Tecnologia de Ponta</h3>
-                <p>Utilizamos equipamentos modernos para diagnósticos precisos e tratamentos eficazes.</p>
-            </div>
-            <div class="feature-item">
-                <i class="fas fa-heart"></i>
-                <h3>Atendimento Humanizado</h3>
-                <p>Cada paciente é único. Oferecemos um cuidado atencioso e personalizado.</p>
-            </div>
-        </section>
-
-        <section class="cta-section">
-            <div class="container cta-content">
-                <h2>Pronto para cuidar do seu sorriso?</h2>
-                <p>Nossa equipe está preparada para oferecer o melhor tratamento odontológico para você e sua família.
+        <section class="features container">
+            <div class="feature">
+                <i class="fas fa-tooth feature__icon"></i>
+                <h3 class="feature__title">Odontologia Completa</h3>
+                <p class="feature__description">Todas as especialidades em um só lugar para sua conveniência e conforto.
                 </p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-microscope feature__icon"></i>
+                <h3 class="feature__title">Tecnologia de Ponta</h3>
+                <p class="feature__description">Utilizamos equipamentos modernos para diagnósticos precisos e
+                    tratamentos eficazes.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-heart feature__icon"></i>
+                <h3 class="feature__title">Atendimento Humanizado</h3>
+                <p class="feature__description">Cada paciente é único. Oferecemos um cuidado atencioso e personalizado.
+                </p>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container cta__content">
+                <h2 class="cta__title">Pronto para cuidar do seu sorriso?</h2>
+                <p class="cta__description">Nossa equipe está preparada para oferecer o melhor tratamento odontológico
+                    para você e sua família.</p>
                 <a href="services.html" class="button">Conheça Nossos Serviços</a>
             </div>
         </section>
 
     </main>
 
-    <footer id="main-footer"></footer>
+    <footer id="main-footer" class="footer"></footer>
 
     <script src="js/loader.js"></script>
     <script src="js/main.js"></script>

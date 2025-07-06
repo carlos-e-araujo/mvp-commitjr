@@ -10,15 +10,12 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/contact-page.css">
+    <link rel="stylesheet" href="css/main-bem.css">
 </head>
 
 <body>
 
-    <header id="main-header"></header>
+    <header id="main-header" class="header"></header>
 
     <main class="container">
         <h1 class="section-title">Entre em Contato</h1>
@@ -26,57 +23,58 @@
             diretos.</p>
 
         <div class="contact-grid">
-            <div class="contact-form-container">
-                <h3>Envie uma Mensagem</h3>
+            <div class="contact-grid__form-container">
+                <h3 class="contact-grid__title">Envie uma Mensagem</h3>
                 <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Nome Completo</label>
-                        <input type="text" id="name" name="name" required>
+                    <div class="contact-form__group">
+                        <label for="name" class="contact-form__label">Nome Completo</label>
+                        <input type="text" id="name" name="name" class="contact-form__input" required>
                     </div>
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" required>
+                    <div class="contact-form__group">
+                        <label for="email" class="contact-form__label">E-mail</label>
+                        <input type="email" id="email" name="email" class="contact-form__input" required>
                     </div>
-                    <div class="form-group">
-                        <label for="message">Mensagem</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+                    <div class="contact-form__group">
+                        <label for="message" class="contact-form__label">Mensagem</label>
+                        <textarea id="message" name="message" rows="5" class="contact-form__textarea"
+                            required></textarea>
                     </div>
-                    <div class="submit-button-wrapper">
-                        <button type="submit" class="button">Enviar</button>
+                    <div class="contact-form__submit-wrapper">
+                        <button type="submit" class="button button--full-width">Enviar</button>
                     </div>
                 </form>
             </div>
 
-            <div class="contact-info">
-                <h3>Nossas Informações</h3>
-                <div class="contact-card-grid">
+            <div class="contact-grid__info-container">
+                <h3 class="contact-grid__title">Nossas Informações</h3>
+                <div class="contact-cards">
                     <a href="https://www.google.com/maps/search/?api=1&query=Avenida+das+Palmeiras+580+Timoteo+MG"
                         target="_blank" class="contact-card">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div class="card-text-content">
-                            <span class="card-title">Endereço</span>
-                            <span class="card-detail">Av. das Palmeiras, 580, Sala 201</span>
+                        <i class="fas fa-map-marker-alt contact-card__icon"></i>
+                        <div class="contact-card__content">
+                            <span class="contact-card__title">Endereço</span>
+                            <span class="contact-card__detail">Av. das Palmeiras, 580, Sala 201</span>
                         </div>
                     </a>
                     <a href="tel:+553138481234" class="contact-card">
-                        <i class="fas fa-phone"></i>
-                        <div class="card-text-content">
-                            <span class="card-title">Telefone</span>
-                            <span class="card-detail">(31) 3848-1234</span>
+                        <i class="fas fa-phone contact-card__icon"></i>
+                        <div class="contact-card__content">
+                            <span class="contact-card__title">Telefone</span>
+                            <span class="contact-card__detail">(31) 3848-1234</span>
                         </div>
                     </a>
                     <a href="https://wa.me/5531998765432" target="_blank" class="contact-card">
-                        <i class="fab fa-whatsapp"></i>
-                        <div class="card-text-content">
-                            <span class="card-title">WhatsApp</span>
-                            <span class="card-detail">(31) 99876-5432</span>
+                        <i class="fab fa-whatsapp contact-card__icon"></i>
+                        <div class="contact-card__content">
+                            <span class="contact-card__title">WhatsApp</span>
+                            <span class="contact-card__detail">(31) 99876-5432</span>
                         </div>
                     </a>
                     <a href="mailto:contato@mendesodonto.com.br" class="contact-card">
-                        <i class="fas fa-envelope"></i>
-                        <div class="card-text-content">
-                            <span class="card-title">E-mail</span>
-                            <span class="card-detail">contato@mendesodonto.com.br</span>
+                        <i class="fas fa-envelope contact-card__icon"></i>
+                        <div class="contact-card__content">
+                            <span class="contact-card__title">E-mail</span>
+                            <span class="contact-card__detail">contato@mendesodonto.com.br</span>
                         </div>
                     </a>
                 </div>
@@ -85,20 +83,19 @@
     </main>
 
     <section class="map-section">
-        <div class="map-section-header">
-            <h2 class="map-section-title">Nossa Localização</h2>
-            <p class="map-section-subtitle">Encontre-nos facilmente no coração de Timóteo. Estamos bem localizados para
+        <div class="map-section__header">
+            <h2 class="map-section__title">Nossa Localização</h2>
+            <p class="map-section__subtitle">Encontre-nos facilmente no coração de Timóteo. Estamos bem localizados para
                 melhor atendê-lo.</p>
         </div>
-        <div class="map-container">
-            <iframe
+        <div class="map-section__container">
+            <iframe class="map-section__iframe"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3755.777711467554!2d-42.64687588508886!3d-19.72145328672054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDQzJzE3LjIiUyA0MsKwMzgnMzkuMyJX!5e0!3m2!1spt-BR!2sbr!4v1625578345789!5m2!1spt-BR!2sbr"
-                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
 
-    <footer id="main-footer"></footer>
+    <footer id="main-footer" class="footer"></footer>
 
     <script src="js/loader.js"></script>
     <script src="js/main.js"></script>

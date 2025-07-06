@@ -1,0 +1,57 @@
+/* css/components/contact-card.css */
+/* Contact card component following BEM methodology */
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    color: var(--text-color-dark);
+    text-decoration: none;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed), border-color var(--transition-speed);
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    word-break: break-word;
+}
+
+.contact-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-color);
+}
+
+.contact-card__icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    flex-shrink: 0;
+    width: 35px;
+    text-align: center;
+}
+
+.contact-card__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    flex: 1;
+    min-width: 0;
+}
+
+.contact-card__title {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--text-color-dark);
+    word-break: break-word;
+}
+
+.contact-card__detail {
+    font-size: 0.85rem;
+    color: var(--text-color-dark);
+    opacity: 0.7;
+    word-break: break-word;
+}

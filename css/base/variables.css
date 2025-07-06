@@ -1,0 +1,32 @@
+/* css/base/variables.css */
+/* Design System Variables */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Lato:wght@400;700&display=swap');
+
+:root {
+    /* Colors */
+    --primary-color: #2B6CB0;
+    --secondary-color: #38B2AC;
+    --accent-color: #4FD1C5;
+    --text-color-dark: #2D3748;
+    --text-color-light: #F7FAFC;
+    --background-color: #FFFFFF;
+    --light-gray-background: #EDF2F7;
+    --border-color: #CBD5E0;
+
+    /* Typography */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Lato', sans-serif;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 4rem;
+
+    /* Other */
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition-speed: 0.3s ease;
+}

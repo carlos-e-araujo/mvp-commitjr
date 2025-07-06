@@ -1,4 +1,5 @@
-/* css/about-page.css */
+/* css/pages/about.css */
+/* About page specific styles following BEM methodology */
 
 .about-content {
     display: grid;
@@ -7,26 +8,32 @@
     align-items: center;
 }
 
-.about-image img {
+.about-content__image {
+    width: 100%;
+}
+
+.about-content__image img {
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
 }
 
-.about-text h2 {
+
+
+.about-content__title {
     margin-top: 0;
 }
 
-.about-text ul {
+.about-content__pillars {
     margin-top: var(--spacing-md);
 }
 
-.about-text ul li {
+.about-content__pillar {
     display: flex;
     align-items: center;
     margin-bottom: var(--spacing-sm);
 }
 
-.about-text ul i {
+.about-content__pillar-icon {
     color: var(--secondary-color);
     margin-right: var(--spacing-sm);
     font-size: 1.2rem;

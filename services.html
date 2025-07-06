@@ -10,15 +10,12 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/services-page.css">
+    <link rel="stylesheet" href="css/main-bem.css">
 </head>
 
 <body>
 
-    <header id="main-header"></header>
+    <header id="main-header" class="header"></header>
 
     <main class="container">
         <h1 class="section-title">Nossos Serviços</h1>
@@ -28,47 +25,51 @@
         <div class="services-grid">
             <article class="service-card">
                 <img src="https://placehold.co/600x400/38B2AC/FFFFFF?text=Clínica+Geral"
-                    alt="Ilustração de um dente sendo examinado">
-                <div class="service-card-content">
-                    <h3>Clínica Geral e Prevenção</h3>
-                    <p>A base para um sorriso saudável. Realizamos check-ups, limpezas, restaurações e orientamos sobre
+                    alt="Ilustração de um dente sendo examinado" class="service-card__image">
+                <div class="service-card__content">
+                    <h3 class="service-card__title">Clínica Geral e Prevenção</h3>
+                    <p class="service-card__description">A base para um sorriso saudável. Realizamos check-ups,
+                        limpezas, restaurações e orientamos sobre
                         a melhor forma de cuidar da sua saúde bucal.</p>
                 </div>
             </article>
 
             <article class="service-card">
                 <img src="https://placehold.co/600x400/2B6CB0/FFFFFF?text=Estética"
-                    alt="Ilustração de um sorriso brilhante">
-                <div class="service-card-content">
-                    <h3>Estética do Sorriso</h3>
-                    <p>Realce a beleza do seu sorriso com nossos tratamentos de clareamento dental, lentes de contato e
+                    alt="Ilustração de um sorriso brilhante" class="service-card__image">
+                <div class="service-card__content">
+                    <h3 class="service-card__title">Estética do Sorriso</h3>
+                    <p class="service-card__description">Realce a beleza do seu sorriso com nossos tratamentos de
+                        clareamento dental, lentes de contato e
                         facetas de porcelana.</p>
                 </div>
             </article>
 
             <article class="service-card">
                 <img src="https://placehold.co/600x400/4A5568/FFFFFF?text=Implantes"
-                    alt="Ilustração de um implante dentário">
-                <div class="service-card-content">
-                    <h3>Implantodontia</h3>
-                    <p>Recupere a função e a estética de dentes perdidos com implantes dentários seguros e de alta
+                    alt="Ilustração de um implante dentário" class="service-card__image">
+                <div class="service-card__content">
+                    <h3 class="service-card__title">Implantodontia</h3>
+                    <p class="service-card__description">Recupere a função e a estética de dentes perdidos com implantes
+                        dentários seguros e de alta
                         tecnologia. Volte a sorrir com confiança.</p>
                 </div>
             </article>
 
             <article class="service-card">
                 <img src="https://placehold.co/600x400/9F7AEA/FFFFFF?text=Ortodontia"
-                    alt="Ilustração de um aparelho ortodôntico">
-                <div class="service-card-content">
-                    <h3>Ortodontia</h3>
-                    <p>Corrija o alinhamento dos seus dentes com aparelhos fixos tradicionais ou com os modernos e
+                    alt="Ilustração de um aparelho ortodôntico" class="service-card__image">
+                <div class="service-card__content">
+                    <h3 class="service-card__title">Ortodontia</h3>
+                    <p class="service-card__description">Corrija o alinhamento dos seus dentes com aparelhos fixos
+                        tradicionais ou com os modernos e
                         discretos alinhadores invisíveis.</p>
                 </div>
             </article>
         </div>
     </main>
 
-    <footer id="main-footer"></footer>
+    <footer id="main-footer" class="footer"></footer>
 
     <script src="js/loader.js"></script>
     <script src="js/main.js"></script>

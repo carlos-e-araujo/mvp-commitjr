@@ -1,0 +1,44 @@
+/* css/components/button.css */
+/* Button component following BEM methodology */
+
+.button {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    background-color: var(--secondary-color);
+    color: var(--text-color-light);
+    font-family: var(--font-heading);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+.button:hover {
+    background-color: var(--accent-color);
+    color: var(--text-color-light);
+    transform: translateY(-2px);
+}
+
+/* Modifiers */
+.button--primary {
+    background-color: var(--primary-color);
+}
+
+.button--primary:hover {
+    background-color: var(--secondary-color);
+}
+
+.button--accent {
+    background-color: var(--accent-color);
+}
+
+.button--accent:hover {
+    background-color: var(--text-color-light);
+    color: var(--accent-color);
+}
+
+.button--full-width {
+    width: 100%;
+}

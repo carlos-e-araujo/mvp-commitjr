@@ -1,4 +1,5 @@
-/* css/home.css */
+/* css/pages/home.css */
+/* Home page specific styles following BEM methodology */
 
 /* Hero Section */
 .hero {
@@ -11,69 +12,83 @@
     justify-content: center;
 }
 
-.hero-content {
+.hero__content {
     max-width: 800px;
     padding: 0 var(--spacing-md);
 }
 
-.hero h1 {
+.hero__title {
     color: var(--text-color-light);
     font-size: 2.5rem;
     margin-bottom: var(--spacing-sm);
 }
 
-.hero p {
+.hero__description {
     font-size: 1.2rem;
     opacity: 0.9;
     margin-bottom: var(--spacing-lg);
 }
 
-.hero .button {
+.hero__button {
     background-color: var(--accent-color);
     font-size: 1.1rem;
 }
 
-.hero .button:hover {
+.hero__button:hover {
     background-color: var(--text-color-light);
     color: var(--accent-color);
 }
 
-
 /* Features Section */
-.features-section {
+.features {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
     text-align: center;
 }
 
-.feature-item i {
+.feature {
+    text-align: center;
+}
+
+.feature__icon {
     font-size: 3rem;
     color: var(--secondary-color);
     margin-bottom: var(--spacing-sm);
 }
 
-.feature-item h3 {
+.feature__title {
     font-size: 1.3rem;
 }
 
+.feature__description {
+    margin-bottom: 0;
+}
 
 /* CTA Section */
-.cta-section {
+.cta {
     background-color: var(--light-gray-background);
 }
 
-.cta-content {
+.cta__content {
     text-align: center;
+}
+
+.cta__title {
+    margin-bottom: var(--spacing-sm);
+}
+
+.cta__description {
+    margin-bottom: var(--spacing-lg);
 }
 
 /* Desktop Styles */
 @media (min-width: 768px) {
-    .hero h1 {
+    .hero__title {
         font-size: 3.5rem;
     }
 
-    .features-section {
+    .features {
         grid-template-columns: repeat(3, 1fr);
     }
 }
