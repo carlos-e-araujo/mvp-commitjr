@@ -1,5 +1,46 @@
-/* css/components/card.css */
-/* Standardized card component system - reduced variations for visual coherence */
+/* css/components/card-new.css */
+/* Standardized card component system - Visual Coherence & Consistency */
+
+/*
+==========================================
+CARD STANDARDIZATION SYSTEM - FINAL
+==========================================
+
+This file represents the completion of the card standardization process for the Mendes Odonto website.
+The previous system had 11+ different card types, now consolidated into 4 main standardized types:
+
+1. CONTENT CARD (card--content)
+   - Replaces: card--feature, card--value, card--service-highlight
+   - Use for: Icon + title + description content, centered layout
+   - Examples: Features, values, service highlights
+
+2. MEDIA CARD (card--media)  
+   - Replaces: card--service, card--team, card--testimonial
+   - Use for: Cards with images/photos
+   - Variants: card--team, card--testimonial, card--service
+   - Examples: Team members, testimonials, service listings
+
+3. INFO CARD (card--info)
+   - Replaces: card--contact, card--facility
+   - Use for: Compact info with horizontal layout
+   - Examples: Contact information, facility features
+
+4. DISPLAY CARD (card--display)
+   - Replaces: card--stat
+   - Use for: Statistics and special displays with glass effect
+   - Examples: Statistics, achievements
+
+LEGACY SUPPORT:
+- card--pillar: Maintained for horizontal layout with specific styling
+- card--differential: Maintained for differentials with specific layout
+
+This standardization provides:
+✓ Visual consistency across all pages
+✓ Reduced CSS complexity (4 main types vs 11+ types)
+✓ Easier maintenance and updates
+✓ Better responsive behavior
+✓ Unified hover effects and transitions
+*/
 
 /* ===== BASE CARD COMPONENT ===== */
 .card {
@@ -161,6 +202,30 @@
     text-align: left;
 }
 
+/* Support for service-highlight features in content cards */
+.card--content .service-highlight__features {
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing-4) 0 0;
+    text-align: left;
+}
+
+.card--content .service-highlight__features li {
+    padding: var(--spacing-2) 0;
+    color: var(--gray-600);
+    font-size: var(--font-size-sm);
+    position: relative;
+    padding-left: var(--spacing-6);
+}
+
+.card--content .service-highlight__features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: var(--font-weight-bold);
+}
+
 /* 2. MEDIA CARD - For cards with images/photos */
 /* Replaces: service, team, testimonial */
 .card--media {
@@ -254,6 +319,41 @@
 
 .card--info .card__subtitle {
     font-size: var(--font-size-sm);
+}
+
+/* Enhanced styling for info cards when used as links (like contact cards) */
+.card--info:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary-color);
+}
+
+.card--info .card__icon {
+    background-color: var(--primary-50);
+    color: var(--primary-color);
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-colors);
+}
+
+.card--info:hover .card__icon {
+    background-color: var(--primary-100);
+    color: var(--primary-600);
+}
+
+.card--info .card__title,
+.card--info .card__subtitle {
+    word-break: break-word;
+}
+
+.card--info .card__title {
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-color-dark);
+}
+
+.card--info .card__subtitle {
+    color: var(--gray-600);
 }
 
 /* 4. DISPLAY CARD - For statistics and special displays */
