@@ -1,0 +1,193 @@
+/* css/utils/visual-coherence.css */
+/* Melhorias de coerência visual - Aplicações globais dos gradientes e sombras harmonizados */
+
+/* ===== APLICAÇÃO GLOBAL DE GRADIENTES ===== */
+/* Para elementos que usam gradientes inconsistentes */
+.gradient-primary {
+    background: var(--gradient-primary);
+}
+
+.gradient-primary-bold {
+    background: var(--gradient-primary-bold);
+}
+
+.gradient-accent {
+    background: var(--gradient-accent);
+}
+
+.gradient-icon {
+    background: var(--gradient-icon);
+}
+
+.gradient-soft {
+    background: var(--gradient-soft);
+}
+
+/* ===== SOMBRAS HARMONIZADAS ===== */
+/* Aplicação consistente de sombras */
+.shadow-card {
+    box-shadow: var(--shadow-card);
+}
+
+.shadow-card-hover {
+    box-shadow: var(--shadow-card-hover);
+}
+
+.shadow-button {
+    box-shadow: var(--shadow-button);
+}
+
+.shadow-button-hover {
+    box-shadow: var(--shadow-button-hover);
+}
+
+/* ===== CORREÇÕES ESPECÍFICAS PARA COERÊNCIA ===== */
+/* Padronização de elementos que ainda usam cores antigas */
+
+/* Facility items - harmonização */
+.facility-item__icon {
+    background: var(--primary-100) !important;
+    color: var(--primary-600) !important;
+}
+
+.facility-item:hover .facility-item__icon {
+    background: var(--primary-600) !important;
+    color: var(--text-color-light) !important;
+    transform: scale(1.1);
+}
+
+/* Contact cards - harmonização */
+.contact-card__icon {
+    background-color: var(--primary-100) !important;
+    color: var(--primary-600) !important;
+}
+
+.contact-card:hover .contact-card__icon {
+    background-color: var(--primary-200) !important;
+    color: var(--primary-700) !important;
+}
+
+/* Footer social links - harmonização */
+.footer__social-link:hover {
+    background-color: var(--accent-500) !important;
+    color: var(--gray-800) !important;
+    transform: translateY(-2px);
+    border-color: var(--accent-500) !important;
+    box-shadow: 0 8px 20px rgba(6, 182, 212, 0.4) !important;
+}
+
+/* ===== CONSISTÊNCIA EM HOVER EFFECTS ===== */
+/* Padronização de efeitos hover em cards */
+.feature-card:hover,
+.value-card:hover,
+.service-card:hover,
+.service-highlight:hover,
+.testimonial-card:hover,
+.team-member:hover,
+.differential-item:hover,
+.pillar-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card-hover);
+}
+
+/* Padronização de bordas em hover */
+.feature-card:hover,
+.value-card:hover,
+.service-highlight:hover {
+    border-top-color: var(--accent-500);
+}
+
+/* ===== MELHORIA DE CONTRASTE E LEGIBILIDADE ===== */
+/* Texto em backgrounds coloridos */
+.text-on-primary {
+    color: var(--text-color-light);
+}
+
+.text-on-secondary {
+    color: var(--text-color-light);
+}
+
+.text-on-accent {
+    color: var(--text-color-light);
+}
+
+/* ===== ESPAÇAMENTOS CONSISTENTES ===== */
+/* Padronização de espaçamentos em seções */
+.section-padding-consistent {
+    padding: var(--section-padding);
+}
+
+.section-padding-sm-consistent {
+    padding: var(--section-padding-sm);
+}
+
+/* ===== MELHORIAS EM ACESSIBILIDADE ===== */
+/* Focus states harmonizados */
+button:focus,
+.button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    box-shadow: var(--input-focus-ring);
+    border-color: var(--primary-400);
+}
+
+/* ===== RESPONSIVIDADE MELHORADA ===== */
+@media (max-width: 768px) {
+
+    /* Redução de gradientes complexos em mobile para performance */
+    .gradient-primary-bold,
+    .gradient-accent {
+        background: var(--primary-600);
+    }
+
+    /* Sombras simplificadas em mobile */
+    .shadow-card-hover,
+    .shadow-button-hover {
+        box-shadow: var(--shadow-md);
+    }
+}
+
+/* ===== ANIMAÇÕES SUAVES ===== */
+/* Transições harmonizadas para todos os elementos interativos */
+.feature-card,
+.value-card,
+.service-card,
+.service-highlight,
+.testimonial-card,
+.team-member,
+.differential-item,
+.pillar-card,
+.contact-card,
+.facility-item,
+.button,
+button {
+    transition: var(--transition-all);
+}
+
+/* ===== CORREÇÕES DE CORES ESPECÍFICAS ===== */
+/* Para elementos que ainda usam cores antigas */
+.text-primary-old {
+    color: var(--primary-600) !important;
+}
+
+.text-secondary-old {
+    color: var(--secondary-600) !important;
+}
+
+.text-accent-old {
+    color: var(--accent-500) !important;
+}
+
+.bg-primary-old {
+    background-color: var(--primary-600) !important;
+}
+
+.bg-secondary-old {
+    background-color: var(--secondary-600) !important;
+}
+
+.bg-accent-old {
+    background-color: var(--accent-500) !important;
+}

@@ -4,73 +4,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap');
 
 :root {
-    /* ===== COLOR PALETTE ===== */
-    /* Primary Colors */
-    --primary-50: #EBF8FF;
-    --primary-100: #BEE3F8;
-    --primary-200: #90CDF4;
-    --primary-300: #63B3ED;
-    --primary-400: #4299E1;
-    --primary-500: #2B6CB0;
-    /* Main primary */
-    --primary-600: #2C5282;
-    --primary-700: #2A4365;
-    --primary-800: #1A365D;
-    --primary-900: #153E75;
+    /* ===== COLOR PALETTE HARMONIZADA ===== */
+    /* Primary Colors - Azul Dental Profissional */
+    --primary-50: #F0F8FF;
+    --primary-100: #E0F2FE;
+    --primary-200: #BAE6FD;
+    --primary-300: #7DD3FC;
+    --primary-400: #38BDF8;
+    --primary-500: #0EA5E9;
+    /* Main primary - Azul confiança e saúde */
+    --primary-600: #0284C7;
+    --primary-700: #0369A1;
+    --primary-800: #075985;
+    --primary-900: #0C4A6E;
 
-    /* Secondary Colors */
-    --secondary-50: #E6FFFA;
-    --secondary-100: #B2F5EA;
-    --secondary-200: #81E6D9;
-    --secondary-300: #4FD1C5;
-    --secondary-400: #38B2AC;
-    /* Main secondary */
-    --secondary-500: #319795;
-    --secondary-600: #2C7A7B;
-    --secondary-700: #285E61;
-    --secondary-800: #234E52;
-    --secondary-900: #1D4044;
+    /* Secondary Colors - Verde Menta Fresco */
+    --secondary-50: #F0FDFA;
+    --secondary-100: #CCFBF1;
+    --secondary-200: #99F6E4;
+    --secondary-300: #5EEAD4;
+    --secondary-400: #2DD4BF;
+    /* Main secondary - Verde saúde e frescor */
+    --secondary-500: #14B8A6;
+    --secondary-600: #0D9488;
+    --secondary-700: #0F766E;
+    --secondary-800: #115E59;
+    --secondary-900: #134E4A;
 
-    /* Accent Colors */
-    --accent-50: #F0FFF4;
-    --accent-100: #C6F6D5;
-    --accent-200: #9AE6B4;
-    --accent-300: #68D391;
-    --accent-400: #4FD1C5;
-    /* Main accent */
-    --accent-500: #38A169;
-    --accent-600: #2F855A;
-    --accent-700: #276749;
-    --accent-800: #22543D;
-    --accent-900: #1C4532;
+    /* Accent Colors - Azul Turquesa Vibrante */
+    --accent-50: #ECFEFF;
+    --accent-100: #CFFAFE;
+    --accent-200: #A5F3FC;
+    --accent-300: #67E8F9;
+    --accent-400: #22D3EE;
+    /* Main accent - Azul turquesa moderno */
+    --accent-500: #06B6D4;
+    --accent-600: #0891B2;
+    --accent-700: #0E7490;
+    --accent-800: #155E75;
+    --accent-900: #164E63;
 
-    /* Gray Scale */
-    --gray-50: #F7FAFC;
-    --gray-100: #EDF2F7;
+    /* Gray Scale - Tons neutros refinados */
+    --gray-50: #F8FAFC;
+    --gray-100: #F1F5F9;
     --gray-200: #E2E8F0;
-    --gray-300: #CBD5E0;
-    --gray-400: #A0AEC0;
-    --gray-500: #718096;
-    --gray-600: #4A5568;
-    --gray-700: #2D3748;
-    --gray-800: #1A202C;
-    --gray-900: #171923;
+    --gray-300: #CBD5E1;
+    --gray-400: #94A3B8;
+    --gray-500: #64748B;
+    --gray-600: #475569;
+    --gray-700: #334155;
+    --gray-800: #1E293B;
+    --gray-900: #0F172A;
 
-    /* Semantic Colors */
-    --success-color: #38A169;
-    --warning-color: #D69E2E;
-    --error-color: #E53E3E;
-    --info-color: #3182CE;
+    /* Semantic Colors - Cores harmoniosas */
+    --success-color: var(--secondary-600);
+    --warning-color: #F59E0B;
+    --error-color: #EF4444;
+    --info-color: var(--primary-600);
 
-    /* Main Color Variables (for backward compatibility) */
-    --primary-color: var(--primary-500);
-    --secondary-color: var(--secondary-400);
-    --accent-color: var(--accent-400);
+    /* Main Color Variables - Paleta principal harmonizada */
+    --primary-color: var(--primary-600);
+    --secondary-color: var(--secondary-600);
+    --accent-color: var(--accent-500);
     --text-color-dark: var(--gray-700);
     --text-color-light: var(--gray-50);
     --background-color: #FFFFFF;
-    --light-gray-background: var(--gray-100);
-    --border-color: var(--gray-300);
+    --light-gray-background: var(--gray-50);
+    --border-color: var(--gray-200);
 
     /* ===== TYPOGRAPHY ===== */
     /* Font Families */
@@ -175,6 +175,111 @@
     --border-radius: var(--border-radius-lg);
 
     /* ===== SHADOWS ===== */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+
+    /* Legacy shadow */
+    --box-shadow: var(--shadow-md);
+
+    /* ===== TRANSITIONS ===== */
+    --transition-fast: 150ms ease;
+    --transition-base: 200ms ease;
+    --transition-slow: 300ms ease;
+    --transition-slower: 500ms ease;
+
+    /* Transition Properties */
+    --transition-all: all var(--transition-base);
+    --transition-colors: color var(--transition-base), background-color var(--transition-base), border-color var(--transition-base);
+    --transition-opacity: opacity var(--transition-base);
+    --transition-shadow: box-shadow var(--transition-base);
+    --transition-transform: transform var(--transition-base);
+
+    /* Legacy transition */
+    --transition-speed: var(--transition-base);
+
+    /* ===== Z-INDEX SCALE ===== */
+    --z-index-dropdown: 1000;
+    --z-index-sticky: 1020;
+    --z-index-fixed: 1030;
+    --z-index-modal-backdrop: 1040;
+    --z-index-modal: 1050;
+    --z-index-popover: 1060;
+    --z-index-tooltip: 1070;
+
+    /* ===== BREAKPOINTS ===== */
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+    --breakpoint-2xl: 1536px;
+
+    /* ===== CONTAINER WIDTHS ===== */
+    --container-sm: 640px;
+    --container-md: 768px;
+    --container-lg: 1024px;
+    --container-xl: 1280px;
+    --container-2xl: 1400px;
+
+    /* ===== COMPONENT SPECIFIC ===== */
+    /* Button */
+    --button-padding-sm: var(--spacing-2) var(--spacing-4);
+    --button-padding-base: var(--spacing-3) var(--spacing-6);
+    --button-padding-lg: var(--spacing-4) var(--spacing-8);
+    --button-border-radius: var(--border-radius-lg);
+    --button-font-weight: var(--font-weight-medium);
+
+    /* Input */
+    --input-padding: var(--spacing-3) var(--spacing-4);
+    --input-border-radius: var(--border-radius-lg);
+    --input-border-width: var(--border-width-1);
+    --input-focus-ring: 0 0 0 3px rgba(43, 108, 176, 0.1);
+
+    /* Card */
+    --card-padding: var(--spacing-6);
+    --card-border-radius: var(--border-radius-xl);
+    --card-shadow: var(--shadow-base);
+    --card-shadow-hover: var(--shadow-lg);
+
+    /* Header */
+    --header-height: 4rem;
+    --header-padding: var(--spacing-4) 0;
+    --header-shadow: var(--shadow-sm);
+    --header-z-index: var(--z-index-sticky);
+
+    /* Footer */
+    --footer-padding: var(--spacing-12) 0 var(--spacing-6);
+
+    /* Section */
+    --section-padding: var(--spacing-16) 0;
+    --section-padding-sm: var(--spacing-12) 0;
+
+    /* ===== GRADIENTES HARMONIZADOS ===== */
+    /* Gradientes principais para hero sections e CTAs */
+    --gradient-primary: linear-gradient(135deg, var(--primary-50) 0%, var(--secondary-50) 100%);
+    --gradient-primary-bold: linear-gradient(135deg, var(--primary-600) 0%, var(--secondary-600) 100%);
+    --gradient-accent: linear-gradient(135deg, var(--accent-500) 0%, var(--primary-600) 100%);
+    --gradient-soft: linear-gradient(135deg, var(--gray-50) 0%, var(--primary-50) 100%);
+
+    /* Gradientes para ícones e elementos decorativos */
+    --gradient-icon: linear-gradient(135deg, var(--accent-500) 0%, var(--secondary-600) 100%);
+    --gradient-hover: linear-gradient(135deg, var(--secondary-500) 0%, var(--accent-500) 100%);
+
+    /* Gradientes para backgrounds de seções */
+    --gradient-section-light: linear-gradient(135deg, var(--background-color) 0%, var(--gray-50) 100%);
+    --gradient-section-primary: linear-gradient(135deg, var(--primary-50) 0%, var(--accent-50) 100%);
+
+    /* ===== SOMBRAS APRIMORADAS ===== */
+    --shadow-card: 0 1px 3px 0 rgba(15, 23, 42, 0.08), 0 1px 2px 0 rgba(15, 23, 42, 0.04);
+    --shadow-card-hover: 0 10px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.06);
+    --shadow-button: 0 4px 14px 0 rgba(2, 132, 199, 0.25);
+    --shadow-button-hover: 0 8px 25px -5px rgba(2, 132, 199, 0.35);
+
+    /* ===== SOMBRAS ORIGINAIS ===== */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);

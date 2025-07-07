@@ -8,6 +8,7 @@
 
 /* Utilities */
 @import url('./utils/utilities.css');
+@import url('./utils/visual-coherence.css');
 
 /* Components */
 @import url('./components/button.css');

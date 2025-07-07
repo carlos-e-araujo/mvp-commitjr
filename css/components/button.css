@@ -4,7 +4,7 @@
 .button {
     display: inline-block;
     padding: var(--button-padding-base);
-    background-color: var(--secondary-color);
+    background-color: var(--accent-color);
     color: var(--text-color-light);
     font-family: var(--font-heading);
     font-weight: var(--button-font-weight);
@@ -13,14 +13,17 @@
     text-align: center;
     border: none;
     cursor: pointer;
-    transition: var(--transition-colors), var(--transition-transform);
+    transition: var(--transition-all);
     text-decoration: none;
+    box-shadow: var(--shadow-sm);
+    letter-spacing: 0.025em;
 }
 
 .button:hover {
-    background-color: var(--accent-color);
+    background-color: var(--primary-color);
     color: var(--text-color-light);
     transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
 }
 
 .button:focus {
@@ -49,7 +52,9 @@
 }
 
 .button--primary:hover {
-    background-color: var(--primary-600);
+    background-color: var(--primary-700);
+    box-shadow: var(--shadow-button-hover);
+    transform: translateY(-1px);
 }
 
 .button--secondary {
@@ -57,7 +62,9 @@
 }
 
 .button--secondary:hover {
-    background-color: var(--secondary-500);
+    background-color: var(--secondary-700);
+    box-shadow: var(--shadow-button-hover);
+    transform: translateY(-1px);
 }
 
 .button--accent {
@@ -65,8 +72,10 @@
 }
 
 .button--accent:hover {
-    background-color: var(--text-color-light);
-    color: var(--accent-color);
+    background-color: var(--accent-600);
+    color: var(--text-color-light);
+    box-shadow: var(--shadow-button-hover);
+    transform: translateY(-1px);
 }
 
 .button--success {
@@ -86,6 +95,8 @@
 .button--outline:hover {
     background-color: var(--primary-color);
     color: var(--text-color-light);
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-lg);
 }
 
 /* Style Modifiers */

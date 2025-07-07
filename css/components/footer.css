@@ -28,6 +28,7 @@
     color: var(--text-color-light);
     margin-bottom: var(--spacing-4);
     line-height: var(--line-height-tight);
+    letter-spacing: -0.025em;
 }
 
 .footer__logo-accent {
@@ -126,7 +127,7 @@
     color: var(--gray-800);
     transform: translateY(-2px);
     border-color: var(--accent-color);
-    box-shadow: 0 8px 20px rgba(79, 209, 197, 0.3);
+    box-shadow: 0 8px 20px rgba(79, 209, 197, 0.4);
 }
 
 .footer__bottom {

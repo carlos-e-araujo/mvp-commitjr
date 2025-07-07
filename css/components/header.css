@@ -28,15 +28,16 @@
     color: var(--primary-color);
     text-decoration: none;
     transition: var(--transition-colors);
+    letter-spacing: -0.025em;
 }
 
 .header__logo:hover {
-    color: var(--primary-600);
+    color: var(--accent-color);
 }
 
 .header__logo-accent {
     font-weight: var(--font-weight-medium);
-    color: var(--secondary-color);
+    color: var(--accent-color);
 }
 
 /* Navigation */
@@ -82,8 +83,8 @@
 
 .header__nav-link:hover,
 .header__nav-link--active {
-    color: var(--secondary-color);
-    background-color: var(--gray-50);
+    color: var(--accent-color);
+    background-color: var(--accent-50);
 }
 
 /* Header button */
@@ -105,8 +106,8 @@
 }
 
 .header__menu-toggle:hover {
-    background-color: var(--gray-50);
-    color: var(--primary-600);
+    background-color: var(--accent-50);
+    color: var(--accent-color);
 }
 
 .header__menu-toggle .fa-times {
@@ -156,7 +157,8 @@
 
     .header__nav-link:hover,
     .header__nav-link--active {
-        background-color: var(--gray-50);
+        background-color: var(--accent-50);
+        color: var(--accent-color);
     }
 
     .header__button {

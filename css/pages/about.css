@@ -3,7 +3,7 @@
 
 /* ===== HERO SECTION ===== */
 .about-hero {
-    background: linear-gradient(135deg, var(--primary-50) 0%, var(--secondary-50) 100%);
+    background: var(--gradient-primary);
     padding: var(--section-padding-sm);
     text-align: center;
 }
@@ -118,7 +118,7 @@
     width: 80px;
     height: 80px;
     margin: 0 auto var(--spacing-6);
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: var(--gradient-icon);
     border-radius: var(--border-radius-full);
     display: flex;
     align-items: center;
@@ -131,7 +131,7 @@
 
 .value-card:hover .value-card__icon {
     transform: scale(1.1);
-    background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+    background: var(--gradient-hover);
 }
 
 .value-card__title {
@@ -369,7 +369,7 @@
 .differential-item:hover {
     transform: translateY(-var(--spacing-1));
     box-shadow: var(--shadow-md);
-    background: linear-gradient(135deg, var(--secondary-50), var(--accent-50));
+    background: var(--gradient-soft);
     border-color: var(--secondary-200);
 }
 
