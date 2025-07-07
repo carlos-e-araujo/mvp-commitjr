@@ -1,6 +1,31 @@
 /* css/pages/contact.css */
 /* Contact page specific styles following BEM methodology with design system variables */
 
+/* ===== HERO SECTION ===== */
+.contact-hero {
+    background: linear-gradient(135deg, var(--primary-50) 0%, var(--secondary-50) 100%);
+    padding: var(--section-padding-sm);
+    text-align: center;
+}
+
+.contact-hero .section-title {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-4);
+}
+
+.contact-hero .section-subtitle {
+    color: var(--gray-600);
+    font-size: var(--font-size-lg);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ===== CONTACT CONTENT SECTION ===== */
+.contact-content {
+    padding: var(--section-padding);
+    background-color: var(--background-color);
+}
+
 /* Layout */
 .contact-grid {
     display: grid;
