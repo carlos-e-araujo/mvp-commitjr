@@ -60,10 +60,8 @@
     box-shadow: var(--input-focus-ring);
 }
 
-.contact-form__input:invalid,
-.contact-form__textarea:invalid {
-    border-color: var(--error-color);
-}
+/* Remove invalid styling - validation will be handled by JavaScript */
+/* Removed automatic invalid state styling to prevent red borders on load */
 
 .contact-form__submit-wrapper {
     display: flex;
@@ -99,4 +97,64 @@
     font-size: var(--font-size-xs);
     color: var(--success-color);
     display: block;
+}
+
+/* Success Banner */
+.contact-form__success-banner {
+    background-color: var(--success-color);
+    color: var(--text-color-light);
+    padding: var(--spacing-4);
+    border-radius: var(--border-radius-lg);
+    margin-bottom: var(--spacing-6);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+    box-shadow: var(--shadow-md);
+    animation: slideDown 0.3s ease-out;
+    text-align: center;
+}
+
+.contact-form__success-banner i {
+    font-size: var(--font-size-lg);
+    flex-shrink: 0;
+}
+
+/* Loading state for button */
+.button--loading {
+    opacity: 0.7;
+    cursor: not-allowed;
+    position: relative;
+}
+
+.button--loading::after {
+    content: '';
+    position: absolute;
+    right: var(--spacing-4);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border: 2px solid transparent;
+    border-top: 2px solid currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Animations */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
 }
