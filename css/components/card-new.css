@@ -1,0 +1,736 @@
+/* css/components/card.css */
+/* Standardized card component system - reduced variations for visual coherence */
+
+/* ===== BASE CARD COMPONENT ===== */
+.card {
+    background-color: var(--background-color);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--card-shadow);
+    border: var(--border-width-1) solid var(--border-color);
+    transition: var(--transition-all);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Standardized hover effect for all cards */
+.card:hover {
+    transform: translateY(-var(--spacing-2));
+    box-shadow: var(--card-shadow-hover);
+    border-color: var(--primary-200);
+}
+
+.card:focus {
+    outline: none;
+    box-shadow: var(--card-shadow-hover), var(--input-focus-ring);
+}
+
+/* ===== CARD CONTENT AREAS ===== */
+.card__header {
+    padding: var(--spacing-6) var(--spacing-6) 0;
+    flex-shrink: 0;
+}
+
+.card__content {
+    padding: var(--spacing-6);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+}
+
+.card__footer {
+    padding: 0 var(--spacing-6) var(--spacing-6);
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+.card__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: var(--transition-transform);
+    flex-shrink: 0;
+}
+
+.card:hover .card__image {
+    transform: scale(1.02);
+}
+
+.card__icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius-full);
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-4);
+    transition: var(--transition-all);
+    flex-shrink: 0;
+    background: var(--primary-50);
+    color: var(--primary-color);
+}
+
+.card:hover .card__icon {
+    background: var(--primary-100);
+    transform: scale(1.05);
+}
+
+.card__title {
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-semibold);
+    color: var(--primary-color);
+    margin: 0;
+    line-height: var(--line-height-tight);
+    font-size: var(--font-size-lg);
+}
+
+.card__subtitle {
+    color: var(--gray-600);
+    margin: 0;
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-normal);
+}
+
+.card__description {
+    color: var(--gray-700);
+    margin: 0;
+    line-height: var(--line-height-relaxed);
+    flex-grow: 1;
+    font-size: var(--font-size-base);
+}
+
+.card__meta {
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+    margin: 0;
+    line-height: var(--line-height-normal);
+}
+
+.card__action {
+    display: inline-flex;
+    align-items: center;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    transition: var(--transition-colors);
+    margin-top: var(--spacing-4);
+    align-self: flex-start;
+}
+
+/* ===== STANDARDIZED CARD TYPES (4 main types) ===== */
+
+/* 1. CONTENT CARD - For text-heavy content with icons */
+/* Replaces: feature, value, service-highlight, pillar, differential */
+.card--content {
+    text-align: center;
+    padding: var(--spacing-8);
+    min-height: 280px;
+    border-top: var(--border-width-4) solid var(--secondary-color);
+}
+
+.card--content:hover {
+    border-top-color: var(--primary-color);
+}
+
+.card--content .card__icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto var(--spacing-6);
+    background: var(--gradient-icon);
+    color: var(--text-color-light);
+    font-size: var(--font-size-2xl);
+}
+
+.card--content:hover .card__icon {
+    background: var(--gradient-hover);
+    transform: scale(1.1);
+}
+
+.card--content .card__title {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-4);
+}
+
+.card--content .card__description {
+    text-align: left;
+}
+
+/* 2. MEDIA CARD - For cards with images/photos */
+/* Replaces: service, team, testimonial */
+.card--media {
+    min-height: 400px;
+}
+
+.card--media .card__image {
+    height: 240px;
+}
+
+.card--media .card__content {
+    padding: var(--spacing-8);
+}
+
+.card--media .card__title {
+    font-size: var(--font-size-xl);
+}
+
+/* Special variant for team members */
+.card--media.card--team {
+    text-align: center;
+}
+
+.card--media.card--team .card__image {
+    width: 150px;
+    height: 150px;
+    margin: var(--spacing-6) auto;
+    border-radius: var(--border-radius-full);
+    border: var(--border-width-4) solid var(--secondary-100);
+}
+
+.card--media.card--team:hover .card__image {
+    border-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.card--media.card--team .card__subtitle {
+    color: var(--secondary-color);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--spacing-4);
+}
+
+/* Special variant for testimonials */
+.card--media.card--testimonial .card__content {
+    padding: var(--spacing-8);
+}
+
+.card--media.card--testimonial .card__meta {
+    color: var(--accent-color);
+    margin-bottom: var(--spacing-4);
+}
+
+.card--media.card--testimonial .card__description {
+    font-style: italic;
+    margin-bottom: var(--spacing-6);
+}
+
+.card--media.card--testimonial .card__footer {
+    padding: 0 var(--spacing-8) var(--spacing-8);
+    display: flex;
+    align-items: center;
+}
+
+/* 3. INFO CARD - For contact info, facilities, quick info */
+/* Replaces: contact, facility */
+.card--info {
+    flex-direction: row;
+    align-items: center;
+    padding: var(--spacing-6);
+    min-height: auto;
+    height: auto;
+}
+
+.card--info .card__icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 var(--spacing-4) 0 0;
+    font-size: var(--font-size-xl);
+}
+
+.card--info .card__content {
+    padding: 0;
+    gap: var(--spacing-1);
+    flex: 1;
+}
+
+.card--info .card__title {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-1);
+}
+
+.card--info .card__subtitle {
+    font-size: var(--font-size-sm);
+}
+
+/* 4. DISPLAY CARD - For statistics and special displays */
+/* Replaces: stat */
+.card--display {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    padding: var(--spacing-8);
+}
+
+.card--display:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.card--display .card__title {
+    font-size: var(--font-size-6xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-color-light);
+    margin-bottom: var(--spacing-2);
+    line-height: 1;
+}
+
+.card--display .card__description {
+    color: var(--text-color-light);
+    opacity: 0.9;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-base);
+}
+
+/* ===== BACKWARD COMPATIBILITY ALIASES ===== */
+/* These ensure existing classes still work while migrating to new system */
+
+.card--feature {
+    text-align: center;
+    padding: var(--spacing-8);
+    min-height: 280px;
+    border-top: var(--border-width-4) solid var(--secondary-color);
+}
+
+.card--feature:hover {
+    border-top-color: var(--primary-color);
+}
+
+.card--feature .card__icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto var(--spacing-6);
+    background: var(--gradient-icon);
+    color: var(--text-color-light);
+    font-size: var(--font-size-2xl);
+}
+
+.card--feature:hover .card__icon {
+    background: var(--gradient-hover);
+    transform: scale(1.1);
+}
+
+.card--value {
+    text-align: center;
+    padding: var(--spacing-8);
+    min-height: 280px;
+    border-top: var(--border-width-4) solid var(--secondary-color);
+}
+
+.card--value:hover {
+    border-top-color: var(--primary-color);
+}
+
+.card--value .card__icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto var(--spacing-6);
+    background: var(--gradient-icon);
+    color: var(--text-color-light);
+    font-size: var(--font-size-2xl);
+}
+
+.card--value:hover .card__icon {
+    background: var(--gradient-hover);
+    transform: scale(1.1);
+}
+
+.card--service-highlight {
+    text-align: center;
+    padding: var(--spacing-8);
+    min-height: 280px;
+    border-top: var(--border-width-4) solid var(--accent-color);
+}
+
+.card--service-highlight:hover {
+    border-top-color: var(--primary-color);
+}
+
+.card--service-highlight .card__icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto var(--spacing-6);
+    background: var(--gradient-icon);
+    color: var(--text-color-light);
+    font-size: var(--font-size-2xl);
+}
+
+.card--service-highlight:hover .card__icon {
+    background: var(--gradient-hover);
+    transform: scale(1.1);
+}
+
+.card--pillar {
+    text-align: left;
+    flex-direction: row;
+    align-items: center;
+    padding: var(--spacing-8);
+    border-left: var(--border-width-4) solid var(--accent-color);
+    min-height: 120px;
+}
+
+.card--pillar:hover {
+    transform: translateX(var(--spacing-2));
+    background-color: var(--accent-50);
+}
+
+.card--pillar .card__icon {
+    margin: 0 var(--spacing-6) 0 0;
+    background: var(--accent-50);
+    color: var(--accent-color);
+    width: 60px;
+    height: 60px;
+}
+
+.card--differential {
+    text-align: left;
+    flex-direction: row;
+    align-items: center;
+    padding: var(--spacing-8);
+    border-left: var(--border-width-4) solid var(--secondary-color);
+    min-height: 120px;
+}
+
+.card--differential:hover {
+    transform: translateY(-var(--spacing-1));
+    background-color: var(--secondary-50);
+}
+
+.card--differential .card__icon {
+    margin: 0 var(--spacing-6) 0 0;
+    background: var(--secondary-50);
+    color: var(--secondary-color);
+    width: 60px;
+    height: 60px;
+}
+
+.card--service {
+    min-height: 400px;
+}
+
+.card--service .card__image {
+    height: 240px;
+}
+
+.card--service .card__content {
+    padding: var(--spacing-8);
+}
+
+.card--service .card__title {
+    font-size: var(--font-size-xl);
+}
+
+.card--team {
+    min-height: 400px;
+    text-align: center;
+}
+
+.card--team .card__image {
+    width: 150px;
+    height: 150px;
+    margin: var(--spacing-6) auto;
+    border-radius: var(--border-radius-full);
+    border: var(--border-width-4) solid var(--secondary-100);
+}
+
+.card--team:hover .card__image {
+    border-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.card--team .card__subtitle {
+    color: var(--secondary-color);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--spacing-4);
+}
+
+.card--testimonial {
+    min-height: 400px;
+}
+
+.card--testimonial .card__content {
+    padding: var(--spacing-8);
+}
+
+.card--testimonial .card__meta {
+    color: var(--accent-color);
+    margin-bottom: var(--spacing-4);
+}
+
+.card--testimonial .card__description {
+    font-style: italic;
+    margin-bottom: var(--spacing-6);
+}
+
+.card--testimonial .card__footer {
+    padding: 0 var(--spacing-8) var(--spacing-8);
+    display: flex;
+    align-items: center;
+}
+
+.card--contact {
+    flex-direction: row;
+    align-items: center;
+    padding: var(--spacing-6);
+    min-height: auto;
+    height: auto;
+}
+
+.card--contact .card__icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 var(--spacing-4) 0 0;
+    font-size: var(--font-size-xl);
+}
+
+.card--contact .card__content {
+    padding: 0;
+    gap: var(--spacing-1);
+    flex: 1;
+}
+
+.card--contact .card__title {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-1);
+}
+
+.card--contact .card__subtitle {
+    font-size: var(--font-size-sm);
+}
+
+.card--facility {
+    flex-direction: row;
+    align-items: center;
+    padding: var(--spacing-6);
+    min-height: auto;
+    height: auto;
+}
+
+.card--facility .card__icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 var(--spacing-4) 0 0;
+    font-size: var(--font-size-xl);
+}
+
+.card--facility .card__content {
+    padding: 0;
+    gap: var(--spacing-1);
+    flex: 1;
+}
+
+.card--facility .card__title {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-1);
+}
+
+.card--facility .card__subtitle {
+    font-size: var(--font-size-sm);
+}
+
+.card--stat {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    padding: var(--spacing-8);
+}
+
+.card--stat:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.card--stat .card__title {
+    font-size: var(--font-size-6xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-color-light);
+    margin-bottom: var(--spacing-2);
+    line-height: 1;
+}
+
+.card--stat .card__description {
+    color: var(--text-color-light);
+    opacity: 0.9;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-base);
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 768px) {
+    .card--content {
+        padding: var(--spacing-6);
+        min-height: 250px;
+    }
+
+    .card--content .card__icon {
+        width: 60px;
+        height: 60px;
+        font-size: var(--font-size-xl);
+    }
+
+    .card--media {
+        min-height: 350px;
+    }
+
+    .card--media .card__image {
+        height: 200px;
+    }
+
+    .card--media .card__content {
+        padding: var(--spacing-6);
+    }
+
+    .card--media.card--team .card__image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .card--info {
+        padding: var(--spacing-4);
+    }
+
+    .card--info .card__icon {
+        width: 40px;
+        height: 40px;
+        font-size: var(--font-size-lg);
+    }
+
+    .card--display {
+        padding: var(--spacing-6);
+    }
+
+    .card--display .card__title {
+        font-size: var(--font-size-4xl);
+    }
+}
+
+@media (max-width: 640px) {
+
+    .card--pillar,
+    .card--differential {
+        flex-direction: column;
+        text-align: center;
+        padding: var(--spacing-6);
+    }
+
+    .card--pillar .card__icon,
+    .card--differential .card__icon {
+        margin: 0 0 var(--spacing-4) 0;
+        width: 50px;
+        height: 50px;
+        font-size: var(--font-size-xl);
+    }
+}
+
+/* ===== CARD GRID SYSTEM ===== */
+.cards-grid {
+    display: grid;
+    gap: var(--spacing-8);
+}
+
+.cards-grid--1 {
+    grid-template-columns: 1fr;
+}
+
+.cards-grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.cards-grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.cards-grid--4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Responsive grid */
+@media (max-width: 768px) {
+
+    .cards-grid--2,
+    .cards-grid--3,
+    .cards-grid--4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .cards-grid--3,
+    .cards-grid--4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1025px) {
+    .cards-grid--4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ===== CARD ANIMATIONS ===== */
+@keyframes cardSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card--animate {
+    animation: cardSlideIn 0.6s ease-out forwards;
+}
+
+.card--animate:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.card--animate:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.card--animate:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+/* ===== UTILITY CLASSES FOR CARDS ===== */
+.card--elevated {
+    box-shadow: var(--shadow-lg);
+}
+
+.card--flat {
+    box-shadow: none;
+    border: var(--border-width-2) solid var(--border-color);
+}
+
+.card--rounded {
+    border-radius: var(--border-radius-xl);
+}
+
+.card--compact {
+    padding: var(--spacing-4);
+}
+
+.card--spacious {
+    padding: var(--spacing-10);
+}
+
+.card--no-hover:hover {
+    transform: none;
+    box-shadow: var(--card-shadow);
+}
+
+.card--center {
+    text-align: center;
+}
+
+.card--left {
+    text-align: left;
+}

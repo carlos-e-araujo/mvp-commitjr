@@ -44,25 +44,25 @@
 /* ===== CORREÇÕES ESPECÍFICAS PARA COERÊNCIA ===== */
 /* Padronização de elementos que ainda usam cores antigas */
 
-/* Facility items - harmonização */
-.facility-item__icon {
+/* Facility items - harmonização - agora usando sistema unificado */
+.card--facility .card__icon {
     background: var(--primary-100) !important;
     color: var(--primary-600) !important;
 }
 
-.facility-item:hover .facility-item__icon {
+.card--facility:hover .card__icon {
     background: var(--primary-600) !important;
     color: var(--text-color-light) !important;
     transform: scale(1.1);
 }
 
-/* Contact cards - harmonização */
-.contact-card__icon {
+/* Contact cards - harmonização - agora usando sistema unificado */
+.card--contact .card__icon {
     background-color: var(--primary-100) !important;
     color: var(--primary-600) !important;
 }
 
-.contact-card:hover .contact-card__icon {
+.card--contact:hover .card__icon {
     background-color: var(--primary-200) !important;
     color: var(--primary-700) !important;
 }
@@ -77,24 +77,14 @@
 }
 
 /* ===== CONSISTÊNCIA EM HOVER EFFECTS ===== */
-/* Padronização de efeitos hover em cards */
-.feature-card:hover,
-.value-card:hover,
-.service-card:hover,
-.service-highlight:hover,
-.testimonial-card:hover,
-.team-member:hover,
-.differential-item:hover,
-.pillar-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-card-hover);
-}
+/* Padronização de efeitos hover em cards - agora usando sistema unificado */
+/* All cards now use standardized hover effects from the main card component */
 
-/* Padronização de bordas em hover */
-.feature-card:hover,
-.value-card:hover,
-.service-highlight:hover {
-    border-top-color: var(--accent-500);
+/* Padronização de cores de ícones em hover para manter coerência visual */
+.card--content .card__icon:hover,
+.card--info .card__icon:hover {
+    background-color: var(--primary-200) !important;
+    color: var(--primary-700) !important;
 }
 
 /* ===== MELHORIA DE CONTRASTE E LEGIBILIDADE ===== */
@@ -150,17 +140,8 @@ select:focus {
 }
 
 /* ===== ANIMAÇÕES SUAVES ===== */
-/* Transições harmonizadas para todos os elementos interativos */
-.feature-card,
-.value-card,
-.service-card,
-.service-highlight,
-.testimonial-card,
-.team-member,
-.differential-item,
-.pillar-card,
-.contact-card,
-.facility-item,
+/* Transições harmonizadas para todos os elementos interativos - agora usando sistema unificado de cards */
+.card,
 .button,
 button {
     transition: var(--transition-all);

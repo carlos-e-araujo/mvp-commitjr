@@ -1,5 +1,5 @@
 /* css/components/card.css */
-/* Unified card component system with standardized variants following BEM methodology */
+/* Standardized card component system - reduced variations for visual coherence */
 
 /* ===== BASE CARD COMPONENT ===== */
 .card {
@@ -17,10 +17,11 @@
     color: inherit;
 }
 
+/* Standardized hover effect for all cards */
 .card:hover {
     transform: translateY(-var(--spacing-2));
     box-shadow: var(--card-shadow-hover);
-    border-color: var(--accent-200);
+    border-color: var(--primary-200);
 }
 
 .card:focus {
