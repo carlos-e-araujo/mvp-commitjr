@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initialize active page highlighting
     highlightActivePage();
+    
+    // Initialize map optimization with a slight delay to ensure DOM is ready
+    setTimeout(initMapOptimization, 500);
 });
 
 // Header Navigation Functionality
@@ -61,4 +64,37 @@ function highlightActivePage() {
             }
         });
     }, 100);
+}
+
+// Map interaction optimization for mobile devices
+function initMapOptimization() {
+    const mapWrapper = document.querySelector('.map-section__iframe-wrapper');
+    const mapIframe = document.querySelector('.map-section__iframe');
+    
+    if (!mapWrapper || !mapIframe) return;
+    
+    // Handle touch interaction for mobile devices
+    if ('ontouchstart' in window) {
+        let touchStarted = false;
+        
+        mapWrapper.addEventListener('touchstart', () => {
+            touchStarted = true;
+            mapIframe.style.pointerEvents = 'auto';
+        });
+        
+        // Reset pointer events after touch interaction
+        document.addEventListener('touchend', () => {
+            if (touchStarted) {
+                setTimeout(() => {
+                    mapIframe.style.pointerEvents = 'none';
+                    touchStarted = false;
+                }, 2000); // Allow 2 seconds of interaction before resetting
+            }
+        });
+        
+        // Handle iframe load event to hide loading animation
+        mapIframe.addEventListener('load', () => {
+            mapIframe.setAttribute('data-loaded', 'true');
+        });
+    }
 }
