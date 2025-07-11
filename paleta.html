@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demonstração da Paleta de Cores</title>
+    <style>
+        /* --- Configurações Gerais --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            background-color: #F8F9FA;
+            color: #333333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* --- Container Principal --- */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        /* --- Tipografia --- */
+        h1,
+        h2,
+        h3 {
+            font-weight: 700;
+        }
+
+        h1 {
+            color: #333333;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .intro {
+            text-align: center;
+            color: #555555;
+            max-width: 600px;
+            margin: 0 auto 50px auto;
+        }
+
+        h2 {
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-top: 50px;
+            color: #008080;
+        }
+
+        h4 {
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        /* --- Seção de Cores --- */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .color-card {
+            background-color: #FFFFFF;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s;
+        }
+
+        .color-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .color-swatch {
+            height: 120px;
+        }
+
+        .color-info {
+            padding: 20px;
+        }
+
+        .hex-code {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #eeeeee;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: #555555;
+        }
+
+        /* --- Seção de Exemplos --- */
+        .examples-section {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .example-card {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .example-card h3 {
+            margin-top: 0;
+        }
+
+        /* Exemplo 1: Cartão de Destaque */
+        .card-highlight {
+            background-color: #F8F9FA;
+        }
+
+        .card-highlight h3 {
+            color: #0080F0;
+        }
+
+        .card-highlight p {
+            color: #333333;
+        }
+
+        .card-highlight a {
+            color: #0080F0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Exemplo 2: Barra de Navegação */
+        .nav-bar {
+            background-color: #008080;
+            padding: 15px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .nav-bar a {
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        .nav-bar a.active {
+            border-bottom: 3px solid #06B6D4;
+        }
+
+        /* Exemplo 3: Alerta */
+        .alert-info {
+            background-color: #eefcff;
+            border-left: 5px solid #06B6D4;
+            padding: 15px 20px;
+            border-radius: 5px;
+        }
+
+        .alert-info p {
+            color: #555555;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Paleta de Cores Vibrantes e Neutras</h1>
+        <p class="intro">Explore esta seleção de cores cuidadosamente escolhida para oferecer uma base sólida e versátil
+            para o seu design. A paleta combina tons de azul e verde vibrantes com neutros clássicos.</p>
+
+        <h2>Cores Principais</h2>
+        <div class="color-grid">
+            <div class="color-card">
+                <div class="color-swatch" style="background-color: #0080F0;"></div>
+                <div class="color-info">
+                    <h4>Azul Vibrante</h4>
+                    <p>Ideal para elementos de destaque, links e botões de chamada para ação (call-to-action).</p>
+                    <span class="hex-code">#0080F0</span>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background-color: #008080;"></div>
+                <div class="color-info">
+                    <h4>Verde-azulado (Teal)</h4>
+                    <p>Perfeito para seções informativas ou como uma cor de destaque mais sóbria.</p>
+                    <span class="hex-code">#008080</span>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background-color: #06B6D4;"></div>
+                <div class="color-info">
+                    <h4>Ciano Brilhante</h4>
+                    <p>Excelente para ícones, alertas ou para adicionar um toque de modernidade e frescor.</p>
+                    <span class="hex-code">#06B6D4</span>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background-color: #333333;"></div>
+                <div class="color-info">
+                    <h4>Cinza Escuro (Charcoal)</h4>
+                    <p>Ideal para textos principais pela sua alta legibilidade e para fundos escuros.</p>
+                    <span class="hex-code">#333333</span>
+                </div>
+            </div>
+        </div>
+
+        <h2>Cores Personalizadas / Neutras</h2>
+        <div class="color-grid">
+            <div class="color-card">
+                <div class="color-swatch" style="background-color: #F8F9FA;"></div>
+                <div class="color-info">
+                    <h4>Branco Acinzentado</h4>
+                    <p>Perfeito para fundos de página, cartões e seções, sendo uma alternativa suave ao branco puro.</p>
+                    <span class="hex-code">#F8F9FA</span>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background-color: #FFFFFF;"></div>
+                <div class="color-info">
+                    <h4>Branco Puro</h4>
+                    <p>Essencial para criar espaços em branco, garantir contraste e uma aparência limpa.</p>
+                    <span class="hex-code">#FFFFFF</span>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background-color: #555555;"></div>
+                <div class="color-info">
+                    <h4>Cinza Médio</h4>
+                    <p>Ótimo para textos secundários, legendas, ícones menos proeminentes e bordas.</p>
+                    <span class="hex-code">#555555</span>
+                </div>
+            </div>
+        </div>
+
+        <h2>Exemplos de Combinação e Uso</h2>
+        <div class="examples-section">
+            <div class="example-card">
+                <h3>Exemplo 1: Cartão de Destaque</h3>
+                <div class="card-highlight example-card">
+                    <h3>Título do Cartão</h3>
+                    <p>Este é um parágrafo de exemplo que utiliza o cinza escuro para o texto principal, garantindo
+                        excelente legibilidade sobre o fundo claro.</p>
+                    <a href="#">Saiba Mais</a>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h3>Exemplo 2: Interface de Navegação</h3>
+                <div class="nav-bar">
+                    <a href="#">Home</a>
+                    <a href="#" class="active">Produtos</a>
+                    <a href="#">Sobre</a>
+                    <a href="#">Contato</a>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h3>Exemplo 3: Alerta Informativo</h3>
+                <div class="alert-info">
+                    <p><b>Dica:</b> Use estas cores para criar uma hierarquia visual clara e guiar o usuário pela sua
+                        interface de forma intuitiva.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
